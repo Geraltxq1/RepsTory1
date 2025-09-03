@@ -68,12 +68,12 @@ def menu ():
                             print(f"El numero {num} es impar.")
                     
                             
-                    case "4":
+                    case "3":
                         numero1 = int(input("Ingrese un numero: ")) 
                         numero2 = int(input(f"Ingrese otro numero mayo que el numero anterior:{numero1} "))
                         print ( "la diferencia entre ", numero2, " y ", numero1, " es: ", numero2 - numero1)
                     
-                    case "5":
+                    case "4":
                         
                         numeroPositivo = int(input("Ingrese un numero positivo: "))
                         if  numeroPositivo >= 0: 
@@ -86,7 +86,7 @@ def menu ():
                             print ("vuelve pronto")
                             print ("fin del programa.....")
                             
-                    case "6":
+                    case "5":
                         from random import randint
 
                         intentos = 0
@@ -117,7 +117,7 @@ def menu ():
                             print (f"Lo siento has acabado el numero de intentos, el numero era {Nmero_secreto}")
                         
                             
-                    case "8":
+                    case "6":
                         print("VACIO")        
                             
                     
@@ -192,7 +192,5 @@ def menu ():
                     
                     
                     case _:
-                        print ("Opcion no Valida. Por favor, Intente de Nuevo")
-                   
-                        
+                        print("Opcion no Valida. Por favor, Intente de Nuevo")
 menu()  
