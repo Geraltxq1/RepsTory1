@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Página de Bienvenida</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url("https://images.theconversation.com/files/602792/original/file-20240625-24-tkpz65.jpg?ixlib=rb-4.1.0&rect=0%2C365%2C2000%2C1212&q=20&auto=format&w=320&fit=clip&dpr=2&usm=12&cs=strip"); 
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .color{
+      color: rgb(255, 0, 255);
+      text-align: center;
+      
+      text-shadow: red;
+    }
+   
+    * {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+  }
+  
+  header {
+    background-color: #000000;
+    color: #ff0000;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .color{
+    margin: 0;
+  } 
+  nav ul {
+    list-style: none;
+    display: flex;
+  }
+  nav li {
+    margin-right: 20px;
+  }
+
+  a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+
+    h2 {
+      color: rgb(255, 0, 0);
+      text-align: left;
+      text-shadow: red;
+    }
+    h3{
+      color: white;
+      text-align: left;
+    }
+    .color1 {
+      color: black
+    }
+    
+    main {
+      margin: 30px;
+    }
+
+
+    button {
+      display: block;         /* Hace que el botón sea de bloque */
+      margin: 20px auto;      /* Lo centra horizontalmente */
+      padding: 10px 20px;
+      background: #e74c3c;
+      border: none;
+      color: white;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #c0392b;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+
+
+  <header>
+  <h1 class="color">CHAR0301</h1>
+  <nav>
+    <ul>
+      <li><a href="#">Inicio</a></li>
+      <li><a href="PG_Acerca.html">Acerca</a></li>
+      <li><a href="PG_Servicios">Servicios</a></li>
+      <li><a href="PG_Contacto">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+<br>
+
+<h1><strong><center>Bienvenid@ a esta nueva pagina ✅</center></strong></h1>
+<h3>Informacion Teorica </h3>
+
+
+
+<h2 class="Color1">Que es la Programacion?</h2>
+<p1>Es el proceso de crear un conjunto de instrucciones (código) en un lenguaje de programación para que una computadora realice tareas específicas o resuelva un problema.
+</p1>
+
+<h2 class="Color1"><br>
+  Que es HTML?
+</h2>
+<p>HTML, o Lenguaje de Marcado de Hipertexto, es el lenguaje estándar para crear páginas web. Define la estructura y el contenido de un sitio web, utilizando etiquetas para organizar y presentar texto, imágenes, videos y otros elementos.</p>
+
+<h2><br> Que es JavaScript?</h2>
+<p>Es un lenguaje de programación que aporta interactividad y dinamismo a las páginas web, funcionando junto con HTML y CSS para crear experiencias de usuario más ricas. Permite, por ejemplo, hacer que los botones sean clicables, validar formularios, crear animaciones, actualizar contenido en tiempo real y desarrollar aplicaciones completas del lado del cliente (navegador) y del lado del servidor (con Node.js). </p>
+
+<ol><br>
+  <li>JavaScript</li>
+  <li>Python</li>
+  <li>html</li>
+  <li>CSS</li>
+
+
+</ol>
+    
+
+    <button onclick="cerrarSesion()">Cerrar Sesión</button>  
+  </main>
+
+  <script>
+    function cerrarSesion() {
+      window.location.href = "Login USER.html"; 
+    }
+    function Acerca() {
+      window.location.href = "PG_Acerca.html"
+    }
+    function Servicios() {
+
+      window.location.href = "PG_Servicios.html"
+    }
+    function Contacto() {
+      window.location.href = "PG_Contacto"
+    }
+
+
+
+  </script>
+</body>
+</html>
