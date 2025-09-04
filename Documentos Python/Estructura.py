@@ -8,7 +8,7 @@ def menu():
         print ("1. Resgistro")
         print ("2. Incio de Sesion")
         
-        opcion = input("iNGRESE UNA OPCION ")
+        opcion = input("--Ingrese una Opcion--")
         if opcion == "0":
             print("Saliendo del Sistema")
             break
@@ -24,7 +24,7 @@ def menu():
             print("Inciando Sesion")
             
             usuario = input("Ingrese su usuario ")
-            contraseña = int(input("Ingrese su Contraseña"))
+            contraseña = int(input("Ingrese su Contraseña "))
             
             if usuario in Usuarios and Usuarios[usuario] == contraseña:
                 print("Usuario Correcto.✅")
@@ -69,6 +69,32 @@ def menu():
                                 print (f"Tu numero {nmero0} es par")
                             else:
                                 print(f"Tu numero {nmero0} es impar")
+                                
+                        elif sub2_opcion == "3":
+                            print("")
+                            
+                            
+                            
+                elif sub_opcion == "2":
+                    while True:
+                        print("0. Salir ")
+                        print("1. Mezcla de Colores")
+                        print("2. Sugerencia de Acciones")
+                        
+                        
+                        
+                        sub3_opcion = input("Ingrese una opcion")
+                    
+                        if sub3_opcion == "0":
+                            print("Saliendo del Sitema")
+                            break 
+                        
+                        if sub3_opcion == "1":
+                            print("Inciando Ejercicio")
+                            
+                        if sub3_opcion == "2":
+                            print("3")
+                            
 
 menu()
 

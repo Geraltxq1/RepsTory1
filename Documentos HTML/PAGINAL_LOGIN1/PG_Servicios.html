@@ -5,9 +5,33 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Servicios</title>
 <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-image: url("data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAJQBBwMBIgACEQEDEQH/xAAZAAEBAQEBAQAAAAAAAAAAAAACAQADBgX/xAAbEAEBAQEBAQEBAAAAAAAAAAAAARECEiFBMf/EABgBAQEBAQEAAAAAAAAAAAAAAAABAgYF/8QAFhEBAQEAAAAAAAAAAAAAAAAAABEB/9oADAMBAAIRAxEAPwDw3MdeYnMdJHQPCXmHIkh4qtIWNIuLg0JmBmjFAaK0UFjMsBYsRYKZQYUBYQwv0RYUSFAWFBhQDhQYUVChJFgrMuLkAMSw7EoOPUY+owPLcw+Y0hyMo0hyNISq0itiyKiKyyA2KzQVosaKDLEKIKsiFICwhIFhfolFChQYUgFCGEIUKDCgFCgwoBKygmJYSA59MVjCvLyOkiSHIiNIUjSFijRlkbARlXAFYuMDMywGixlgNIUbFgLIrRcBYsQoBQoMICixIXIEUEoCwokhRUKFEkKCpjEKA1CsYV5mQ5EkOQRsKLI0ioyFjYCMuNiCNi4oDIsXFkBJCkaRQZY0ig0JCgrQo2LIIUWJCgqrEhxRYUSFBGKNhQCipCBmVkUcYmB5qQ5GkKRUaRZFkKQAxsOxsAMbDxsAcbCxsAcWLIqCYuMuAhSNiwGhY0i4o0JosgLFaQpAaFEhSAsJIUgLCiFAWEkLKCK2LIijVbpQedkKRZCkVGkWRZCkUHEw8bBKGNh42BQxpC8riFHGwsbAoyLhSNhCpiyLi4Kki4qyKNIUZZAaQo2FBK0WfxpCkCtCjSFIFaQv1sKRCtDSQgqMrIDWWsNPhSFI0hSKjSFI0hYqDjYcjYIGNh42AGNh42AGNhyLgOeLh42AGFi4uAmLi4uCphSLIuCJJ9KRZPq4DSFI0hSfASE0hYDFI0hSINirjYCYxIihWWsD4shyJI6SNKmFIshSCDjeTkXDEc/LeXTGxdHPy3l0xsQc5Fw8bADFwsbAHFwsXADFkORZyASLIc5XASRZCkWQBwpCkKRAcXCkWQEkORpCwBVcbAFixEArLWFfI5hyNzz80+Y0uthSFIWDI4vk5FxQMbyeL5ByxsdMXyDljeXXy3lBy8r5dMbyDn5WcumLOQc/KyOnlZAc5CnJ4sgBIXkpyXlAMXHTFkBzkKcn5XEBxcKRcAMbDxMABrpYNgOfUZemFfK4+yWuvLMuNafJxmVlSZhCk+MzA2NjMIzMwLi4jAuLjMDZFkZkVZCkZgawkYCXlmQJmYGhRmBGZkEodMwOXTMwr//Z");
+        background-repeat: no-repeat;
+        background-size: cover;
+    } 
 
-    .Titulo{
-    color: rgb(255, 0, 0)
+    .Titulo {
+        color: red 
+    }
+
+button {
+        display: block;         /* Hace que el botón sea de bloque */
+        margin: 20px auto;      /* Lo centra horizontalmente */
+        padding: 10px 20px;
+        background: #e74c3c;
+        border: none;
+        color: white;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background: #c0392b;
     }
 
 
@@ -17,23 +41,15 @@
 <body>
     
     <h1 class="Titulo"><center>Servicios de la Pagina</center></h1>
-    <ol>
-        <li>hola</li>
-        <li>hola</li>
-        <li>hola</li>
-    </ol>
-    <ul> 
-        <li>hola</li>
-        <li>hola</li>
-        <li>hola</li>
+    <h2 class = "SemiTitulo">Servicios Disponibles Para los Usuarios:</h2>
+    <p class = "infoservice">Estos Servicios tiene una clasificacion muy importante, puedes tener algunos beneficios por las compras de estos y estas participando por increibles ofertas</p>
+    <h2 class ="Descuentos">Descuentos Disponibles:</h2>
+    <p = class="InfoDescuentos">Estos descuentos solo aplican para trabajadores administrativos</p>
+    <h2 = class="Reservas">Agenda de Reservas:</h2>
+    <p = class="InfoReservas">Para Agendar una Reserva es Necesario entrar a nuestro sitio web</p>
 
 
-    </ul>
-    
     <button onclick="Devolverse()">Devolverse</button>
-
-
-
 
 </main>
 <script>
