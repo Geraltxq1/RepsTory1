@@ -76,6 +76,7 @@ def menu ():
                     case "4":
                         
                         numeroPositivo = int(input("Ingrese un numero positivo: "))
+                        
                         if  numeroPositivo >= 0: 
                             print ("el numero es positivo")  
 
