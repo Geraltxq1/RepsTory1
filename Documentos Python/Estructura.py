@@ -41,6 +41,7 @@ def menu():
                 sub_opcion = input("Seleccione una Opcion: ")
                 
                 if sub_opcion == "0":
+                    print("Saliendo")
                     break
                     
                 elif sub_opcion == "1":
@@ -101,7 +102,7 @@ def menu():
                                 intentos += 1
             
                                 if estimado > 120 or estimado < 0:
-                                    print("sU NUMERO ESTA FUERA DEL RANGO, INGRESE OTRO NUMERO")
+                                    print("Su numero esta fuera del rango, Porfavor ingrese otro Numero")
             
                                 elif estimado < Nmero_secreto:
                                     print ("Mi numero es mas alto") 
@@ -130,8 +131,9 @@ def menu():
                         sub3_opcion = input("Ingrese una opcion: ")
                     
                         if sub3_opcion == "0":
+                            
                             print("Saliendo del Sitema")
-                            break 
+                            
                         
                         elif sub3_opcion == "1":
                             print("Este programa mezcla dos colores.")
