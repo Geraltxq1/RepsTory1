@@ -1,7 +1,7 @@
 
 Usuarios = {}
 
-def menu():
+def menu(): 
     
     while True: 
         print ("0. Salir del Programa")
@@ -57,7 +57,7 @@ def menu():
                         
                         sub2_opcion = input("Seleccione Una Opcion: ")#Menu de interracion de matematicas 
                         
-                        if sub2_opcion == "o":
+                        if sub2_opcion == "0":
                             break
                         
                         elif sub2_opcion == "1":
@@ -126,14 +126,11 @@ def menu():
                         print("1. Mezcla de Colores")
                         print("2. Sugerencia de Acciones")
                         
-                        
-                        
                         sub3_opcion = input("Ingrese una opcion: ")
                     
                         if sub3_opcion == "0":
-                            
                             print("Saliendo del Sitema")
-                            
+                            break 
                         
                         elif sub3_opcion == "1":
                             print("Este programa mezcla dos colores.")
@@ -198,5 +195,3 @@ def menu():
                                 
 
 menu()
-
-
