@@ -39,6 +39,8 @@
         background: #c0392b;
     }
 
+
+    
     table {
         font-family: arial, sans-serif;
         border-collapse: collapse;
@@ -136,6 +138,8 @@
 
 
     </table>
+
+
     <button onclick="Devolverse()">Devolverse</button>
 </main>
 <script>

@@ -5,28 +5,110 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Servicios - Mi Web</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: "Segoe UI", Arial, sans-serif; }
-    body { background: linear-gradient(to right, #1a1a1d, #2e2e2e); color: #f5f5f5; line-height: 1.6; }
 
-    header { background: #111; padding: 20px 50px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
-    header h1 { font-size: 22px; color: #e74c3c; font-weight: bold; letter-spacing: 2px; }
-    nav ul { list-style: none; display: flex; gap: 25px; }
-    nav a { text-decoration: none; color: #f5f5f5; font-weight: 500; transition: color 0.3s; }
-    nav a:hover { color: #e74c3c; }
+    /*  RESET BÁSICO */
+    * { margin: 0; 
+      padding: 0; 
+      box-sizing: border-box; 
+      font-family: "Segoe UI", Arial, sans-serif; }
 
-    .hero { text-align: center; padding: 80px 20px; color: white; }
-    .hero h2 { font-size: 40px; margin-bottom: 15px; text-shadow: 2px 2px 6px rgba(0,0,0,0.7); }
+    /*  ESTILO GENERAL DE LA PÁGINA */
+    body { 
+      background: linear-gradient(to right, #1a1a1d, #2e2e2e); 
+      color: #f5f5f5; 
+      line-height: 1.6; }
 
-    main { padding: 60px 10%; display: grid; gap: 40px; }
-    section { background: #1f1f1f; padding: 30px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.4); transition: transform 0.3s; }
-    section:hover { transform: translateY(-5px); }
-    section h2 { color: #f1c40f; margin-bottom: 15px; }
+    /*  ENCABEZADO + NAV */
+    header { 
+      background: #111; 
+      padding: 20px 50px; 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center; 
+      position: sticky; 
+      top: 0; 
+      z-index: 100;
+    }
+    
+    header h1 { 
+      font-size: 22px; 
+      color: #e74c3c; 
+      font-weight: bold; 
+      letter-spacing: 2px; 
+    }
 
-    footer { background: #111; padding: 20px; text-align: center; font-size: 14px; color: #bbb; margin-top: 40px; }
-    footer a { color: #e74c3c; text-decoration: none; }
+    nav ul { 
+      list-style: none; 
+      display: flex; 
+      gap: 25px; 
+    }
+
+    nav a { 
+      text-decoration: none; 
+      color: #f5f5f5; 
+      font-weight: 500; 
+      transition: color 0.3s; 
+    }
+
+    nav a:hover { 
+      color: #e74c3c; 
+    }
+
+    .hero { 
+      text-align: center; 
+      padding: 80px 20px; 
+      color: white; 
+    }
+
+    .hero h2 { 
+      font-size: 40px; 
+      margin-bottom: 15px; 
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.7); 
+    }
+
+    /* Contenedor Prinipal de la Pagina */
+    main { 
+      padding: 60px 10%; 
+      display: grid; 
+      gap: 40px; 
+    }
+    /*Secciones de servicios */
+    section { 
+      background: #1f1f1f; 
+      padding: 30px; 
+      border-radius: 12px; 
+      box-shadow: 0 5px 15px rgba(0,0,0,0.4); 
+      transition: transform 0.3s; 
+    }
+
+    section:hover { 
+      transform: translateY(-5px); 
+    }
+
+    section h2 { 
+      color: #f1c40f; 
+      margin-bottom: 15px; 
+    }
+    /* pie de Pagina */
+    footer { 
+      background: #111; 
+      padding: 20px; 
+      text-align: center; 
+      font-size: 14px; 
+      color: #bbb; 
+      margin-top: 40px; 
+    }
+
+    footer a { 
+      color: #e74c3c; 
+      text-decoration: none; 
+    }
+
   </style>
 </head>
 <body>
+
+  <!-- Encabezado con logo y menu de navegacion -->
   <header>
     <h1>Mi Web</h1>
     <nav>
@@ -39,11 +121,12 @@
     </nav>
   </header>
 
+  <!-- Seccion HERO Presenta los servicios ofrecidos -->
   <div class="hero">
     <h2>Nuestros Servicios</h2>
     <p>Te ofrecemos soluciones digitales adaptadas a tus necesidades.</p>
   </div>
-
+  <!-- 🔹 CONTENIDO PRINCIPAL CON LOS SERVICIOS -->
   <main>
     <section>
       <h2>Desarrollo Web</h2>
@@ -62,7 +145,7 @@
         <p>Cursos y talleres sobre programación, bases de datos y frameworks modernos.</p>
     </section>
 </main>
-
+<!--Footer - Pie de Pagina -->
 <footer>
     <p>© 2025 Mi Web | Diseñada con ❤️ por <a href="#">Carlos</a></p>
 </footer>

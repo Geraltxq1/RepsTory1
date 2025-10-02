@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Página Moderna</title>
   <style>
-    /* RESET */
+    /* RESET*/
     * {
       margin: 0;
       padding: 0;
@@ -19,7 +19,7 @@
       line-height: 1.6;
     }
 
-    /* HEADER */
+    /* HEADER - Barra superior encabezado */
     header {
       background: #000000;
       padding: 20px 50px;
@@ -31,20 +31,21 @@
       z-index: 100;
     }
 
+    /* Título de Encabezado */
     header h1 {
       font-size: 22px;
       color: #e74c3c;
       font-weight: bold;
       letter-spacing: 2px;
     }
-
+    /* Menú de navegación */
     nav ul {
       list-style: none;
       display: flex;
       gap: 25px;
+      align-items: center;
     }
 
-/* Nos ayuda a cambiar el color al pasar el mouse */ 
     nav a {
       text-decoration: none;
       color: #f5f5f5;
@@ -55,8 +56,56 @@
     nav a:hover {
       color: #e74c3c;
     }
-/* Este Cierra La configuracion */
-    
+
+    /* Terminacion menú de navegación */
+
+    /* Avatar circular de Usuario*/
+    .user-menu {
+      position: relative;
+    }
+
+    .avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%; /* Forma Circular */
+      background: url("https://cdn-icons-png.flaticon.com/512/149/149071.png") no-repeat center/cover;
+      cursor: pointer;
+      border: 2px solid #fff;
+    }
+
+    /* Menú desplegable */
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 50px;
+      right: 0;
+      background-color: #1f1f1f;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      z-index: 100;
+      min-width: 160px;
+    }
+
+    /* Menú desplegable del usuario */
+    .dropdown a {
+      display: block;
+      padding: 12px;
+      color: #fff;
+      text-decoration: none;
+      font-size: 14px;
+      border-bottom: 1px solid #333;
+    }
+
+    .dropdown a:last-child {
+      border-bottom: none;
+    }
+
+    .dropdown a:hover {
+      background-color: #444;
+    }
+    /* Terminacion del Menú desplegable del usuario */
+
+    /* HERO - Portada con Imganen de Fondo*/
     .hero {
       text-align: center;
       padding: 80px 20px;
@@ -90,8 +139,9 @@
       background: #c0392b;
       transform: scale(1.05);
     }
+    /* Terminacion Hero */
 
-    /* SECCIONES */
+    /* SECCIONES DE TEXTO*/
     main {
       padding: 60px 10%;
       display: grid;
@@ -109,30 +159,17 @@
     section:hover {
       transform: translateY(-10px);
     }
-    section h1 {
-      
-      color: red
-      
-    }
-
-    section h3 {
-      color: yellow
-    }
-
+    section h1 { color: red }
+    section h3 { color: yellow }
     section h2 {
       color: #f1c40f;
       margin-bottom: 15px;
     }
 
-    section p {
-      margin-bottom: 10px;
-    }
+    section p { margin-bottom: 10px; }
+    ol { margin-left: 20px; }
 
-    ol {
-      margin-left: 20px;
-    }
-
-    /* FOOTER */
+    /* FOOTER - Pie de Pagina */
     footer {
       background: #ffffff;
       padding: 20px;
@@ -146,51 +183,48 @@
       color: #e74c3c;
       text-decoration: none;
     }
-    /* ACA COMIENZA HTML */
   </style>
 </head>
 <body>
 
+  <!-- CABECERA -->
   <header>
     <h1>Mi Portafolio</h1>
     <nav>
       <ul>
+        <!-- Enlaces de navegación -->
         <li><a href="PG_Principal.html">Inicio</a></li>
+        <li><a href="PG_Tienda.html">Tienda</a></li>
         <li><a href="PG_Acerca.html">Acerca</a></li>
         <li><a href="PG_Servicios.html">Servicios</a></li>
         <li><a href="PG_Contacto.html">Contacto</a></li>
-        <li><a href="login"><img src="https://www.pngwing.com/es/free-png-ypylt/download" alt=""></a></li>
+
+        <!-- Avatar con menú de Usuario -->
+        <li class="user-menu">
+          <div class="avatar" onclick="toggleMenu()"></div>
+          <div class="dropdown" id="menuUsuario">
+            <a href="PG_Login.html">Iniciar Sesión</a>
+            <a href="PG_Register.html">Registrarse</a>
+          </div>
+        </li>
+
       </ul>
     </nav>
   </header>
 
-  <!-- HERO --> 
+  <!-- HERO - Portada Principal --> 
   <div class="hero">
     <h2><strong>Bienvenid@ a esta nueva página 🚀</strong></h2>
     <h3><strong>Aprende sobre programación, desarrollo web y mucho más.</strong></h3>
   </div>
 
-  <!-- CONTENIDO- CaJones O Secciones para IMplementar Informacion -->
-  
-    <main>
+  <!-- CONTENIDO - Principal -->
+  <main>
     <section>
       <h1><strong>Lenguajes De Programacion o Interpretadores de Codigo, Conoce lo mejor de ellos aqui en Website.</strong></h1>
       <h6>Lenguajes de Programacion mas usados a nivel Mundial, Estudio realiazdo por profesionales.</h6>
     </section>
 
-
-    <section>
-    <h2>Yuliana Gonzalez</h2>
-    <ol>
-      <li>737474</li>
-      <li>mama</li>
-      <li>papa</li>
-      <li>hijo</li>
-    </ol>
-
-
-
-    </section>
     <section>
       <H2>Lenguajes de Programacion o Interpretadores de Codigo</H2>
       <ol>
@@ -206,8 +240,6 @@
         <li>C+</li>
       </ol>
     </section>
-
-
 
     <section>
       <h2>Que es la Programación?</h2>
@@ -228,12 +260,28 @@
       <h2>Que es python?</h2>
       <p>ptthon es un lenguaje  de programacion orientado al analisis de datos y muy bien elementado ala programacion en IA </p>
     </section>
-    
   </main>
-
+  <!-- PIE DE PÁGINA -->
   <footer>
     <p>© 2025 Mi Web | Diseñada con ❤️ por <a href="PG_Principal">Carlos</a></p>
   </footer>
 
+  <!-- SCRIPT: controla el menú desplegable del avatar -->
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("menuUsuario");
+      menu.style.display = (menu.style.display === "block") ? "none" : "block";
+    }
+
+    // Cierra el menú si se hace clic fuera del avatar
+    window.onclick = function(event) {
+      if (!event.target.matches('.avatar')) {
+        const menu = document.getElementById("menuUsuario");
+        if (menu && menu.style.display === "block") {
+          menu.style.display = "none";
+        }
+      }
+    }
+  </script>
 </body>
 </html>
