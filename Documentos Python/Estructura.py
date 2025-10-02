@@ -101,25 +101,23 @@ def menu():
                         
                                 intentos += 1
             
-                                if estimado > 120 or estimado < 0:
-                                    print("Su numero esta fuera del rango, Porfavor ingrese otro Numero")
+                            if estimado > 120 or estimado < 0:
+                                print("Su numero esta fuera del rango, Porfavor ingrese otro Numero")
             
-                                elif estimado < Nmero_secreto:
-                                    print ("Mi numero es mas alto") 
+                            elif estimado < Nmero_secreto:
+                                print ("Mi numero es mas alto") 
             
-                                elif estimado > Nmero_secreto: 
-                                    print("Mi numero es mas Bajo")
+                            elif estimado > Nmero_secreto: 
+                                print("Mi numero es mas Bajo")
             
-                                else:
-                                    print (f"Felicidades {Nombre} Has adivinado el numero en {intentos} intentos ")
-                                    break 
+                            else:
+                                print (f"Felicidades {Nombre} Has adivinado el numero en {intentos} intentos ")
+                                break 
             
-                                if estimado != Nmero_secreto:
-                                    print (f"Lo siento has acabado el numero de intentos, el numero era {Nmero_secreto}")
+                            if estimado != Nmero_secreto:
+                                print (f"Lo siento has acabado el numero de intentos, el numero era {Nmero_secreto}")
                         
-                            
-                            
-                            
+                                
                 elif sub_opcion == "2":
                     while True:
                         print("0. Salir ")

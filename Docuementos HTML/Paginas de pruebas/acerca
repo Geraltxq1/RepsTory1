@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Acerca</title>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUQOjBruNcc5gMA4QwTEDuqqTIoGqmU63Q0w&s"); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+        
+
+    .Titulo{
+    color: rgb(255, 0, 0)
+    }
+
+    .SemiTitulo{
+        color: rgb(0, 0, 0)
+    }
+
+    
+    button {
+        display: block;         /* Hace que el botón sea de bloque */
+        margin: 20px auto;      /* Lo centra horizontalmente */
+        padding: 10px 20px;
+        background: #e74c3c;
+        border: none;
+        color: white;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    button:hover {
+        background: #c0392b;
+    }
+
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 60%;
+        margin:auto;
+        
+    }
+
+    td, th {
+        border: 2px solid #000000;
+        text-align: left;
+        padding: 8px;
+
+
+    }
+
+    td, tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+
+
+
+
+</style>
+</head>
+
+<body>
+    
+    <h1 class="Titulo"><center>Acerca de la Pagina</center></h1>
+    
+    <h2 class = "SemiTitulo">Politicas Principales</h2>
+    <h4>Informacion:</h4>
+    <p class = "Inforpoliticas">Este parrafo solo son politicas que nos dicen los deberes y derechos de los Usuarios</p>
+    
+    <h2 class = "SemiTitulo">Deberes:</h2>
+    <ol>
+        <li>Ser Confidencial con la informacion de la web</li>
+        <li>No Hacer mal uso del sitio</li>
+        <li>Respetar las Opiones de las demas personas</li>
+    </ol>
+    <h2 class = "SemiTitulo">Derechos:</h2>
+    <ol>
+        <li>Proteger Toda tu informacion Privada</li>
+        <li>Guardar con seguridad la informacion contra Terceros</li>
+        <li>Derecho a la portabilidad </li>
+    </ol>
+
+    <a href="/Docuementos HTML/PAGINA PRINCIPAL/Login USER.html">Link relativo (link dentro de otra carpeta)</a><br>
+    <a href="PG_rtr.html">Link local (dentro de la misma carpeta)</a><br>
+    <a target="_blank" href="https://www.youtube.com/">Ir a YouTube</a><br>
+    <img src="YouTube.png" height="400"/>
+
+    <table>
+        <tr> 
+            <th>Nombres</th>
+            <th>Celular</th>
+            <th>Correo</th>
+            <th>ID</th>
+        </tr>
+        <tr>
+            <td>Carlos</td>
+            <td>3117607087</td>
+            <td>carlosandresortiz320@gmail.com</td>
+            <td>1</td>
+        </tr>
+        <tr> 
+            <td>Juanes</td>
+            <td>3147080824</td>
+            <td>juanes07@gmail.com</td>
+            <td>2</td>
+
+        </tr>
+        <tr>
+            <td>Silvana</td>
+            <td>3122134212</td>
+            <td>silvana08@gmail.com</td>
+            <td>3</td>
+
+        </tr>
+        <tr> 
+            <td>Laura</td>
+            <td>3144362732</td>
+            <td>Laura89@gmail.com</td>
+            <td>4</td>
+
+        </tr>
+        <tr>
+            <td>yeral</td>
+            <td>63t12837239</td>
+            <td>yeraldin@gmail.com</td>
+            <td>5</td>
+
+
+        </tr>
+
+
+    </table>
+    <button onclick="Devolverse()">Devolverse</button>
+</main>
+<script>
+    function Devolverse() {
+    window.location.href = "Pagina_Principal.html"; 
+
+
+    }
+</script>
+
+
+
+</body>
+</html>
