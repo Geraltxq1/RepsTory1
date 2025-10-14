@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Página Moderna</title>
   <style>
-    /* RESET */
+    /* RESET*/
     * {
       margin: 0;
       padding: 0;
@@ -19,7 +19,7 @@
       line-height: 1.6;
     }
 
-    /* HEADER */
+    /* HEADER - Barra superior encabezado */
     header {
       background: #000000;
       padding: 20px 50px;
@@ -31,13 +31,14 @@
       z-index: 100;
     }
 
+    /* Título de Encabezado */
     header h1 {
       font-size: 22px;
       color: #e74c3c;
       font-weight: bold;
       letter-spacing: 2px;
     }
-
+    /* Menú de navegación */
     nav ul {
       list-style: none;
       display: flex;
@@ -55,52 +56,8 @@
     nav a:hover {
       color: #e74c3c;
     }
-
-    /* Avatar circular */
-    .user-menu {
-      position: relative;
-    }
-
-    .avatar {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background: url("https://cdn-icons-png.flaticon.com/512/149/149071.png") no-repeat center/cover;
-      cursor: pointer;
-      border: 2px solid #fff;
-    }
-
-    /* Menú desplegable */
-    .dropdown {
-      display: none;
-      position: absolute;
-      top: 50px;
-      right: 0;
-      background-color: #1f1f1f;
-      border-radius: 8px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-      z-index: 100;
-      min-width: 160px;
-    }
-
-    .dropdown a {
-      display: block;
-      padding: 12px;
-      color: #fff;
-      text-decoration: none;
-      font-size: 14px;
-      border-bottom: 1px solid #333;
-    }
-
-    .dropdown a:last-child {
-      border-bottom: none;
-    }
-
-    .dropdown a:hover {
-      background-color: #444;
-    }
-
-    /* HERO */
+/* Este Cierra La configuracion */
+    
     .hero {
       text-align: center;
       padding: 80px 20px;
@@ -134,8 +91,9 @@
       background: #c0392b;
       transform: scale(1.05);
     }
+    /* Terminacion Hero */
 
-    /* SECCIONES */
+    /* SECCIONES DE TEXTO*/
     main {
       padding: 60px 10%;
       display: grid;
@@ -163,7 +121,7 @@
     section p { margin-bottom: 10px; }
     ol { margin-left: 20px; }
 
-    /* FOOTER */
+    /* FOOTER - Pie de Pagina */
     footer {
       background: #ffffff;
       padding: 20px;
@@ -181,50 +139,49 @@
 </head>
 <body>
 
+  <!-- CABECERA -->
   <header>
     <h1>Mi Portafolio</h1>
     <nav>
       <ul>
+        <!-- Enlaces de navegación -->
         <li><a href="PG_Principal.html">Inicio</a></li>
+        <li><a href="PG_Tienda.html">Tienda</a></li>
         <li><a href="PG_Acerca.html">Acerca</a></li>
         <li><a href="PG_Servicios.html">Servicios</a></li>
         <li><a href="PG_Contacto.html">Contacto</a></li>
-
-        <!-- Avatar con menú -->
-        <li class="user-menu">
-          <div class="avatar" onclick="toggleMenu()"></div>
-          <div class="dropdown" id="menuUsuario">
-            <a href="Login.html">Iniciar Sesión</a>
-            <a href="Registro.html">Registrarse</a>
-          </div>
-        </li>
+        <li><a href="login"><img src="https://www.pngwing.com/es/free-png-ypylt/download" alt=""></a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- HERO --> 
+  <!-- HERO - Portada Principal --> 
   <div class="hero">
     <h2><strong>Bienvenid@ a esta nueva página 🚀</strong></h2>
     <h3><strong>Aprende sobre programación, desarrollo web y mucho más.</strong></h3>
   </div>
 
-  <!-- CONTENIDO -->
-  <main>
+  <!-- CONTENIDO- CaJones O Secciones para IMplementar Informacion -->
+  
+    <main>
     <section>
       <h1><strong>Lenguajes De Programacion o Interpretadores de Codigo, Conoce lo mejor de ellos aqui en Website.</strong></h1>
       <h6>Lenguajes de Programacion mas usados a nivel Mundial, Estudio realiazdo por profesionales.</h6>
     </section>
 
-    <section>
-      <h2>Yuliana Gonzalez</h2>
-      <ol>
-        <li>737474</li>
-        <li>mama</li>
-        <li>papa</li>
-        <li>hijo</li>
-      </ol>
-    </section>
 
+    <section>
+    <h2>Yuliana Gonzalez</h2>
+    <ol>
+      <li>737474</li>
+      <li>mama</li>
+      <li>papa</li>
+      <li>hijo</li>
+    </ol>
+
+
+
+    </section>
     <section>
       <H2>Lenguajes de Programacion o Interpretadores de Codigo</H2>
       <ol>
@@ -261,25 +218,10 @@
       <p>ptthon es un lenguaje  de programacion orientado al analisis de datos y muy bien elementado ala programacion en IA </p>
     </section>
   </main>
-
+  <!-- PIE DE PÁGINA -->
   <footer>
     <p>© 2025 Mi Web | Diseñada con ❤️ por <a href="PG_Principal">Carlos</a></p>
   </footer>
 
-  <script>
-    function toggleMenu() {
-      const menu = document.getElementById("menuUsuario");
-      menu.style.display = (menu.style.display === "block") ? "none" : "block";
-    }
-
-    window.onclick = function(event) {
-      if (!event.target.matches('.avatar')) {
-        const menu = document.getElementById("menuUsuario");
-        if (menu && menu.style.display === "block") {
-          menu.style.display = "none";
-        }
-      }
-    }
-  </script>
 </body>
 </html>
