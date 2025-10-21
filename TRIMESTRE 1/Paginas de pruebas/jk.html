@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Página Moderna</title>
   <style>
-    /* RESET*/
+    /* RESET */
     * {
       margin: 0;
       padding: 0;
@@ -19,7 +19,7 @@
       line-height: 1.6;
     }
 
-    /* HEADER - Barra superior encabezado */
+    /* HEADER */
     header {
       background: #000000;
       padding: 20px 50px;
@@ -31,14 +31,13 @@
       z-index: 100;
     }
 
-    /* Título de Encabezado */
     header h1 {
       font-size: 22px;
       color: #e74c3c;
       font-weight: bold;
       letter-spacing: 2px;
     }
-    /* Menú de navegación */
+
     nav ul {
       list-style: none;
       display: flex;
@@ -57,9 +56,7 @@
       color: #e74c3c;
     }
 
-    /* Terminacion menú de navegación */
-
-    /* Avatar circular de Usuario*/
+    /* Avatar circular */
     .user-menu {
       position: relative;
     }
@@ -67,7 +64,7 @@
     .avatar {
       width: 40px;
       height: 40px;
-      border-radius: 50%; /* Forma Circular */
+      border-radius: 50%;
       background: url("https://cdn-icons-png.flaticon.com/512/149/149071.png") no-repeat center/cover;
       cursor: pointer;
       border: 2px solid #fff;
@@ -86,7 +83,6 @@
       min-width: 160px;
     }
 
-    /* Menú desplegable del usuario */
     .dropdown a {
       display: block;
       padding: 12px;
@@ -103,9 +99,8 @@
     .dropdown a:hover {
       background-color: #444;
     }
-    /* Terminacion del Menú desplegable del usuario */
 
-    /* HERO - Portada con Imganen de Fondo*/
+    /* HERO */
     .hero {
       text-align: center;
       padding: 80px 20px;
@@ -139,9 +134,8 @@
       background: #c0392b;
       transform: scale(1.05);
     }
-    /* Terminacion Hero */
 
-    /* SECCIONES DE TEXTO*/
+    /* SECCIONES */
     main {
       padding: 60px 10%;
       display: grid;
@@ -169,7 +163,7 @@
     section p { margin-bottom: 10px; }
     ol { margin-left: 20px; }
 
-    /* FOOTER - Pie de Pagina */
+    /* FOOTER */
     footer {
       background: #ffffff;
       padding: 20px;
@@ -187,42 +181,48 @@
 </head>
 <body>
 
-  <!-- CABECERA -->
   <header>
     <h1>Mi Portafolio</h1>
     <nav>
       <ul>
-        <!-- Enlaces de navegación -->
         <li><a href="PG_Principal.html">Inicio</a></li>
-        <li><a href="PG_Tienda.html">Tienda</a></li>
         <li><a href="PG_Acerca.html">Acerca</a></li>
         <li><a href="PG_Servicios.html">Servicios</a></li>
         <li><a href="PG_Contacto.html">Contacto</a></li>
 
-        <!-- Avatar con menú de Usuario -->
+        <!-- Avatar con menú -->
         <li class="user-menu">
           <div class="avatar" onclick="toggleMenu()"></div>
           <div class="dropdown" id="menuUsuario">
-            <a href="PG_Login.html">Iniciar Sesión</a>
-            <a href="PG_Register.html">Registrarse</a>
+            <a href="Login.html">Iniciar Sesión</a>
+            <a href="Registro.html">Registrarse</a>
           </div>
         </li>
-
       </ul>
     </nav>
   </header>
 
-  <!-- HERO - Portada Principal --> 
+  <!-- HERO --> 
   <div class="hero">
     <h2><strong>Bienvenid@ a esta nueva página 🚀</strong></h2>
     <h3><strong>Aprende sobre programación, desarrollo web y mucho más.</strong></h3>
   </div>
 
-  <!-- CONTENIDO - Principal -->
+  <!-- CONTENIDO -->
   <main>
     <section>
       <h1><strong>Lenguajes De Programacion o Interpretadores de Codigo, Conoce lo mejor de ellos aqui en Website.</strong></h1>
       <h6>Lenguajes de Programacion mas usados a nivel Mundial, Estudio realiazdo por profesionales.</h6>
+    </section>
+
+    <section>
+      <h2>Yuliana Gonzalez</h2>
+      <ol>
+        <li>737474</li>
+        <li>mama</li>
+        <li>papa</li>
+        <li>hijo</li>
+      </ol>
     </section>
 
     <section>
@@ -261,19 +261,17 @@
       <p>ptthon es un lenguaje  de programacion orientado al analisis de datos y muy bien elementado ala programacion en IA </p>
     </section>
   </main>
-  <!-- PIE DE PÁGINA -->
+
   <footer>
     <p>© 2025 Mi Web | Diseñada con ❤️ por <a href="PG_Principal">Carlos</a></p>
   </footer>
 
-  <!-- SCRIPT: controla el menú desplegable del avatar -->
   <script>
     function toggleMenu() {
       const menu = document.getElementById("menuUsuario");
       menu.style.display = (menu.style.display === "block") ? "none" : "block";
     }
 
-    // Cierra el menú si se hace clic fuera del avatar
     window.onclick = function(event) {
       if (!event.target.matches('.avatar')) {
         const menu = document.getElementById("menuUsuario");
