@@ -1,0 +1,96 @@
+// ex1.js
+console.log("Esto es ex1.js");
+
+// --------------------
+// Ejercicio 2
+// --------------------
+var nombre = "Carlos";
+var apellido = "Ortiz";
+var anioNacimiento = 2003;
+
+// Año actual fijo (sin usar new Date)
+var anioActual = 2025; 
+var edad = anioActual - anioNacimiento;
+
+// Construcción del texto sin `${}` ni concatenación directa
+var partes = [
+    "Hola, mi nombre es ",
+    nombre, " ", apellido,
+    ", tengo ", edad,
+    " años y estoy aprendiendo Javascript."
+];
+var mensaje = partes.join("");
+
+// Mostrar sin innerText (se usa textContent)
+document.getElementById("student_message").textContent = mensaje;
+
+// --------------------
+// Ejercicio 3
+// --------------------
+var num1 = parseFloat(document.getElementById("num_1").textContent);
+var num2 = parseFloat(document.getElementById("num_2").textContent);
+var promedio = (num1 / num2).toFixed(2);
+document.getElementById("result").textContent = promedio;
+
+// --------------------
+// Ejercicio 4
+// --------------------
+var phone1 = "988866552";
+var phone2 = "99087612366";
+var phone3 = 876543123;
+
+// En lugar de if, se usa comparación booleana directa
+var validarTelefono = function(n){
+    return (n + "").length === 9 && "válido" || "inválido";
+};
+
+console.log("phone1:", validarTelefono(phone1));
+console.log("phone2:", validarTelefono(phone2));
+console.log("phone3:", validarTelefono(phone3));
+
+// --------------------
+// Ejercicio 5
+// --------------------
+var resultado = Math.pow(32, 6);
+console.log("32^6 =", resultado);
+
+// --------------------
+// Ejercicio 6
+// --------------------
+// a) var NAME;        -> válido
+// b) var $num1;       -> válido
+// c) var typeof;      -> inválido (palabra reservada)
+// d) var first-name;  -> inválido (guion es resta)
+// e) var attempt_2;   -> válido
+// f) var 2ndAttempt;  -> inválido (no puede iniciar con número)
+// g) var full name;   -> inválido (espacios no permitidos)
+
+// --------------------
+// Ejercicio 7
+// --------------------
+var quantity = "25";
+var number = 6;
+var pressure;
+var temperature = null;
+
+console.log(quantity += quantity); // "2525"
+console.log((7 + 5) / number + 2); // 4
+console.log(pressure); // undefined
+console.log(temperature); // null
+console.log(typeof pressure); // "undefined"
+console.log(typeof temperature); // "object"
+
+// --------------------
+// Ejercicio 8
+// --------------------
+var url1 = document.getElementById("url_1").textContent.trim();
+var url3 = document.getElementById("url_3").textContent.trim();
+
+var urlConHttps = ["https://", url1].join("");
+var urlSinHttps = url3.split("https://").join("");
+
+document.getElementById("url_2").textContent = urlConHttps;
+document.getElementById("url_4").textContent = urlSinHttps;
+
+console.log("URL con https:", urlConHttps);
+console.log("URL sin https:", urlSinHttps);

@@ -14,7 +14,7 @@ def mostrar_tareas():
 
     print("\n--- LISTA DE TAREAS ---")
     for i, t in enumerate(tareas, start=1):
-        estado = "✔️" if t["completada"] else "❌"
+        estado = "〰️" if t["completada"] else "✅"
         print(f"{i}. {t['tarea']} - {estado}")
 
 def completar_tarea():
@@ -68,3 +68,5 @@ def menu():
 
 # Ejecutar programa
 menu()
+
+

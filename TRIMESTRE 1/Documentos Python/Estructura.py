@@ -189,7 +189,4 @@ def menu():
                         
                         elif sub4_opcion == "1":
                             print("hola")
-
-                                
-
 menu()
