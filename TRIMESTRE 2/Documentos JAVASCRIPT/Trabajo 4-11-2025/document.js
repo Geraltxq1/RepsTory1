@@ -26,11 +26,6 @@ function multiplicar() {
 function dividir() {
     var n1 = parseFloat(document.getElementById("num1").value);
     var n2 = parseFloat(document.getElementById("num2").value);
-    if (n2 === 0) {
-        document.getElementById("resultado").innerText = "No se puede dividir entre 0.";
-    } else {
-        var resultado = n1 / n2;
-        document.getElementById("resultado").innerText =
-            "La división de " + n1 + " entre " + n2 + " es: " + resultado;
-    }
+    var resultado = n1 / n2;
+    document.getElementById("resultado").innerText = "La división de " + n1 + " entre " + n2 + " es: " + resultado;
 }

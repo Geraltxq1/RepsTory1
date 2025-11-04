@@ -19,12 +19,38 @@
     }
 
     .calculadora {
+        position: relative; /* necesario para el efecto */
         background-color: #CF00AC;
-        border-radius: 20px;
+        border-radius: 40px;
         padding: 20px;
         box-shadow: 0 5px 15px rgba(0,0,0,0.4);
         width: 280px;
         text-align: center;
+        z-index: 1;
+        overflow: hidden; /* evita que el borde sobresalga */
+    }
+
+    /* --- EFECTO DE BORDE ANIMADO --- */
+    .calculadora::before {
+        content: "";
+        position: absolute;
+        top: -3px;
+        left: -3px;
+        right: -3px;
+        bottom: -3px;
+        border-radius: 40px;
+        background: linear-gradient(90deg, 
+            #ff00ff, #0f0f0f, #621794, #ae00ff);
+        background-size: 300% 300%;
+        animation: recorrer 3s linear infinite;
+        z-index: -1;
+        filter: blur(3px); /* da efecto neón */
+    }
+
+    @keyframes recorrer {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
     }
 
     h1 {
@@ -89,26 +115,49 @@
     img:hover {
         background-color: #ffa733;
     }
+
+    footer {
+        color: white;
+        font-size: 0.7em;
+        margin-top: 15px;
+    }
+
+    footer a {
+        color: #f50dd6;
+        text-decoration: none;
+    }
+
+    footer a:hover {
+        text-decoration: underline;
+    }
+    .txt1 {
+        color: white;
+    }
+
+
 </style>
 </head>
 <body>
 
 <div class="calculadora">
-    <h1>Calculadora</h1>
+    <h1>Calculadora Aritmetica.</h1>
     <div id="resultado">0</div>
 
     <div class="inputs">
-        <input type="number" id="num1" placeholder="Número 1">
-        <input type="number" id="num2" placeholder="Número 2">
+        <input type="number" id="num1" placeholder="Ingrese el Número 1:">
+        <input type="number" id="num2" placeholder="Ingrese el Número 2:">
     </div>
 
+    <h3 class="txt1">Operadores:</h3>
     <div class="operaciones">
         <img src="suma.png" alt="suma" onclick="sumar()">
         <img src="resta.png" alt="resta" onclick="restar()">
         <img src="multi.png" alt="multiplicacion" onclick="multiplicar()">
         <img src="div.png" alt="division" onclick="dividir()">
     </div>
-
+    <h6 class="txt2">Calculadora para Ejercicios Basicos...</h6>
+    <footer>
+    <p>© 2025 Mi Web | Diseñada con ❤️ por <a href="#">carlos@gmail.com</a></p></footer>
 
     <script src="document.js"></script>
 </div>
