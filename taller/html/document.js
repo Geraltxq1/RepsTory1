@@ -54,4 +54,3 @@ function grados(){
     document.getElementById("resultado").innerText = "La conversion de los Grados: " + n1 + " es igual a : " + resultado.toFixed(2);
 }
 
-funcion 
