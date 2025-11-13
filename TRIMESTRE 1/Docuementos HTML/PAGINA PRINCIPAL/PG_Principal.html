@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Moderna</title>
+  <style>
+    /* RESET*/
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #1a1a1d, #2e2e2e);
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    /* HEADER - Barra superior encabezado */
+    header {
+      background: #000000;
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    /* Título de Encabezado */
+    header h1 {
+      font-size: 22px;
+      color: #e74c3c;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+    /* Menú de navegación */
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      align-items: center;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #f5f5f5;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #e74c3c;
+    }
+/* Este Cierra La configuracion */
+    
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      background: url("https://static.vecteezy.com/system/resources/previews/071/061/587/non_2x/coding-on-laptop-screen-with-hands-programming-in-dark-room-free-photo.jpg") no-repeat center center/cover;
+      color: rgb(255, 255, 255);
+    }
+
+    .hero h2 {
+      font-size: 40px;
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 25px;
+    }
+
+    .hero button {
+      padding: 12px 25px;
+      font-size: 16px;
+      border: none;
+      background: #e74c3c;
+      color: rgb(255, 255, 255);
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .hero button:hover {
+      background: #c0392b;
+      transform: scale(1.05);
+    }
+    /* Terminacion Hero */
+
+    /* SECCIONES DE TEXTO*/
+    main {
+      padding: 60px 10%;
+      display: grid;
+      gap: 40px;
+    }
+
+    section {
+      background: #1f1f1f;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+      transition: transform 0.3s;
+    }
+
+    section:hover {
+      transform: translateY(-10px);
+    }
+    section h1 { color: red }
+    section h3 { color: yellow }
+    section h2 {
+      color: #f1c40f;
+      margin-bottom: 15px;
+    }
+
+    section p { margin-bottom: 10px; }
+    ol { margin-left: 20px; }
+
+    /* FOOTER - Pie de Pagina */
+    footer {
+      background: #ffffff;
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
+      color: #ff0000;
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: #e74c3c;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- CABECERA -->
+  <header>
+    <h1>Mi Portafolio</h1>
+    <nav>
+      <ul>
+        <!-- Enlaces de navegación -->
+        <li><a href="PG_Principal.html">Inicio</a></li>
+        <li><a href="PG_Tienda.html">Tienda</a></li>
+        <li><a href="PG_Acerca.html">Acerca</a></li>
+        <li><a href="PG_Servicios.html">Servicios</a></li>
+        <li><a href="PG_Contacto.html">Contacto</a></li>
+        <li><a href="login"><img src="https://www.pngwing.com/es/free-png-ypylt/download" alt=""></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO - Portada Principal --> 
+  <div class="hero">
+    <h2><strong>Bienvenid@ a esta nueva página 🚀</strong></h2>
+    <h3><strong>Aprende sobre programación, desarrollo web y mucho más.</strong></h3>
+  </div>
+
+  <!-- CONTENIDO- CaJones O Secciones para IMplementar Informacion -->
+  
+    <main>
+    <section>
+      <h1><strong>Lenguajes De Programacion o Interpretadores de Codigo, Conoce lo mejor de ellos aqui en Website.</strong></h1>
+      <h6>Lenguajes de Programacion mas usados a nivel Mundial, Estudio realiazdo por profesionales.</h6>
+    </section>
+
+
+    <section>
+    <h2>Yuliana Gonzalez</h2>
+    <ol>
+      <li>737474</li>
+      <li>mama</li>
+      <li>papa</li>
+      <li>hijo</li>
+    </ol>
+
+
+
+    </section>
+    <section>
+      <H2>Lenguajes de Programacion o Interpretadores de Codigo</H2>
+      <ol>
+        <li>Python</li>
+        <li>Html</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>SQL</li>
+        <li>C++</li>
+        <li>Java</li>
+        <li>PHP</li>
+        <li>Kotlin</li>
+        <li>C+</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Que es la Programación?</h2>
+      <p>Es el proceso de crear un conjunto de instrucciones en un lenguaje de programación para que una computadora realice tareas específicas o resuelva un problema.</p>
+    </section>
+
+    <section>
+      <h2>Que es HTML?</h2>
+      <p>HTML, o Lenguaje de Marcado de Hipertexto, es el estándar para crear páginas web. Define la estructura y el contenido de un sitio web.</p>
+    </section>
+
+    <section>
+      <h2>Que es JavaScript?</h2>
+      <p>Es un lenguaje de programación que aporta interactividad y dinamismo a las páginas web, funcionando junto con HTML y CSS para crear experiencias ricas.</p>
+    </section>
+
+    <section>
+      <h2>Que es python?</h2>
+      <p>ptthon es un lenguaje  de programacion orientado al analisis de datos y muy bien elementado ala programacion en IA </p>
+    </section>
+  </main>
+  <!-- PIE DE PÁGINA -->
+  <footer>
+    <p>© 2025 Mi Web | Diseñada con ❤️ por <a href="PG_Principal">Carlos</a></p>
+  </footer>
+
+</body>
+</html>

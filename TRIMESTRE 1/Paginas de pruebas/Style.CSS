@@ -1,0 +1,28 @@
+.Texto {
+    color: rgb(255, 0, 0);
+    size: 20px;
+    
+}
+
+.op {
+    color: rgb(55, 0, 255);
+}
+
+h3 {
+    color: blue;
+    size: 20px;
+
+}
+
+p{ 
+    color: rgb(255, 255, 255) ;
+
+
+}
+body{
+    background-color: black;
+}
+
+.ParrafoInfo{
+    color: rgb(61, 145, 184);
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar Sesión</title>
+  <style>
+    /* Estilos generales de la Pagina */
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(to right, #1a1a1d, #2e2e2e);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: white;
+    }
+
+    /* Caja de Login para el Usuario */
+    .login-box {
+      background: #1f1f1f;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.6);
+      width: 350px;
+      text-align: center;
+    }
+    /* Titulo */
+    h2 {
+      margin-bottom: 20px;
+      color: #e74c3c;
+    }
+
+    /* Campos de Texto */
+    input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 6px;
+      background: #333;
+      color: white;
+      font-size: 16px;
+    }
+
+    /* Boton */
+    button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      background: #e74c3c;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    /* Al pasar el mouse en el boton cambiar de color */
+    button:hover {
+      background: #c0392b;
+    }
+    /* Texto y enlaces */
+    p {
+      margin-top: 15px;
+    }
+
+    a {
+      color: #f1c40f;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <!--Cja del login-->
+  <div class="login-box">
+    <h2>Iniciar Sesión</h2>
+    <!--Formulario de User y Pass-->
+    <form onsubmit="return iniciarSesion(event)">
+      <input type="text" id="usuario" placeholder="Usuario" required>
+      <input type="password" id="clave" placeholder="Contraseña" required>
+      <button type="submit">Entrar</button>
+    </form>
+    <!--Enlace a el registro-->
+    <p>¿No tienes cuenta? <a href="PG_Register.html">Regístrate aquí</a></p>
+  </div>
+<!--Script de validacion de Informacion por el usuario-->
+  <script>
+    function iniciarSesion(event) {
+      event.preventDefault(); // evita que recargue la página
+      const usuario = document.getElementById("usuario").value;
+      const clave = document.getElementById("clave").value;
+      
+      if (usuario && clave) {
+        
+        window.location.href = "PG_Bienvenido.html";
+      } 
+      else {
+        alert("Por favor llena todos los campos.");
+      }
+    }
+    
+  </script>
+</body>
+</html>
