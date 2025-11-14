@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Witcher - Carta de Personaje</title>
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+
+<div class="smoke-right"></div>
+
+<div class="card-container" onclick="setVideoBackground()">
+    <div class="titulo"><strong>Geralt of Rivia</strong></div>
+
+    <div class="character-frame">
+        <img src="image/witcher.gif" alt="Geralt animado">
+        <div class="flash" id="flash"></div>
+    </div>
+
+    <div class="health-bar">
+        <div id="health" class="health"></div>
+    </div>
+
+    
+    <div id="message" class="message-box"></div>
+
+    <div class="upper-actions">
+        <div class="action-box power1" onclick="attack(10, 'audio1', this, false, 'Poder 1')"></div>
+        <div class="action-box power2" onclick="attack(20, 'audio2', this, false, 'Poder 2')"></div>
+        <div class="action-box power3" onclick="attack(30, 'audio3', this, false, 'Poder 3')"></div>
+        <div class="action-box power4" onclick="attack(40, 'audio4', this, false, 'Poder 4')"></div>
+    </div>
+
+    <div class="lower-actions">
+        <div class="action-box power5" onclick="attack(15, 'audio5', this, false, 'Poder 5')"></div>
+        <div class="action-box power6" onclick="attack(25, 'audio6', this, true, 'Poder 6')"></div>
+    </div>
+</div>
+
+<!-- 🔊 Audios -->
+<audio id="audio1" src="image/grito1.mp3"></audio>
+<audio id="audio2" src="image/grito2.mp3"></audio>
+<audio id="audio3" src="image/grito3.mp3"></audio>
+<audio id="audio4" src="image/grito4.mp3"></audio>
+<audio id="audio5" src="image/gritoo5.mp3"></audio>
+<audio id="audio6" src="image/gritoo6.mp3"></audio>
+
+<script src="Document.js"></script>
+
+</body>
+</html>
