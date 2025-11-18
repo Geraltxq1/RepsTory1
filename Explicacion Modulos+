@@ -1,0 +1,124 @@
+📁 Explicación de cada archivo/módulo
+📂 api/
+
+Es la carpeta raíz de tu proyecto (en tu caso, probablemente la API de NestJS).
+
+📂 src/
+
+Aquí vive todo el código principal de la aplicación. NestJS trabaja por módulos, controladores y servicios.
+
+📄 app.controller.ts
+
+Es un controlador.
+Se encarga de recibir solicitudes HTTP (GET, POST, etc.) y devolver respuestas.
+Ejemplo: rutas como /users, /login, etc.
+
+📄 app.controller.spec.ts
+
+Archivo de pruebas unitarias para el controlador (.spec.ts indica test).
+NestJS usa Jest para testear.
+
+📄 app.module.ts
+
+El módulo raíz de la aplicación.
+Nest agrupa su lógica en módulos y este es el principal.
+Aquí se registran controladores, servicios y otros módulos.
+
+📄 app.service.ts
+
+Es un servicio, donde se define la lógica de negocio del módulo App.
+Los controladores usan los servicios para obtener datos.
+
+📄 main.ts
+
+Punto de entrada de la aplicación.
+Aquí NestJS inicia el servidor.
+
+📂 test/
+
+Directorio para pruebas e2e (end-to-end).
+NestJS crea uno por defecto para probar la API completa.
+
+📄 .gitignore
+
+Lista de archivos y carpetas que Git debe ignorar (por ejemplo: node_modules, builds, logs).
+
+📄 .prettierrc
+
+Configuración de Prettier, una herramienta de formato de código.
+Define reglas como comillas simples, tabulaciones, ancho de línea, etc.
+
+📄 eslint.config.mjs
+
+Configuración del linter ESLint, que ayuda a encontrar errores y mantener estilo de código consistente.
+
+📄 nest-cli.json
+
+Configuración del CLI de NestJS.
+Controla cómo compila, dónde genera archivos, rutas por defecto, etc.
+
+📄 package.json
+
+El corazón del proyecto Node.
+Define:
+
+dependencias
+
+scripts (como npm run start, npm run build)
+
+versión del proyecto
+
+metadata
+
+📄 package-lock.json
+
+Registro exacto de las dependencias instaladas.
+Garantiza que otros equipos instalen las mismas versiones.
+
+📄 README.md
+
+Documento de información del proyecto.
+Suele incluir:
+
+cómo instalar
+
+cómo ejecutar
+
+descripción general
+
+(Si usas GitHub, se muestra automáticamente en la página del repo).
+
+📄 tsconfig.json
+
+Configuración principal del compilador TypeScript.
+Define:
+
+target (ES2017, ES2022…)
+
+strict mode
+
+qué carpetas incluir/excluir
+
+paths
+
+📄 tsconfig.build.json
+
+Configuración de TypeScript solo para compilación, usada por Nest CLI.
+Incluye opciones adicionales para el proceso de build.
+
+✔️ Resumen rápido
+Archivo / Carpeta	Función
+src/	                           Código principal del proyecto
+test/	                           Pruebas e2e
+app.controller.ts	               Controlador: define rutas
+app.service.ts	                   Servicio: lógica del negocio
+app.module.ts	                   Módulo principal
+main.ts	                           Arranque del servidor
+.gitignore	                       Archivos a ignorar en Git
+.prettierrc	                       Formato de código
+eslint.config.mjs	               Linter de código
+package.json	                   Configuración del proyecto
+package-lock.json	               Control de versiones de dependencias
+README.md	                       Documentación
+tsconfig.json	                   Configuración TypeScript
+tsconfig.build.json	               Configuración de build
