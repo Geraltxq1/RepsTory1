@@ -1,0 +1,16 @@
+E2E significa End-to-End.
+
+En el contexto de desarrollo y testing, especialmente en NestJS, una prueba E2E (end-to-end) es un tipo de prueba que verifica toda la aplicación completa, desde el punto inicial hasta el final, como si fuera un usuario real haciendo peticiones.
+
+🧪 ¿Qué es una prueba E2E?
+
+Es una prueba que comprueba que todas las partes del sistema funcionan juntas correctamente:
+
+➡️ El cliente envía una petición
+➡️ El servidor recibe
+➡️ Pasa por controladores
+➡️ Llama servicios
+➡️ Usa la base de datos (si está configurado para pruebas)
+➡️ Devuelve una respuesta
+
+Simula el flujo real de la aplicación, no solo funciones aisladas.
