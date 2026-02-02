@@ -1,0 +1,115 @@
+/* ==== RESETEO ==== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* ==== FONDO Y CENTRADO ==== */
+html, body {
+    height: 100%;
+}
+
+body {
+    background: #000000;     /* color del fondo que muestras */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 60px;
+}
+
+/* ==== CONTENEDOR PRINCIPAL ==== */
+.cover {
+    background: #f8d7d7;
+    padding: 40px;
+    width: 600px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+/* ==== TÍTULO ==== */
+.cover h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.contenedor {
+    background: #bfc207;        /* color de fondo del contenedor */
+    padding: 25px;              /* espacio interno */
+    width: 60%;
+    margin: 50px auto;          /* centrar */
+    
+    border: 4px solid #fffb00;  /* 🔥 CUADRO ALREDEDOR 🔥 */
+    border-radius: 15px;        /* esquinas redondeadas */
+<
+    box-shadow: 0 6px 15px rgba(0,0,0,0.25); /* sombra opcional */
+}
+
+/* ==== INPUT ==== */
+#entrada {
+    padding: 8px;
+    width: 280px;
+    border: 1px solid #888;
+    border-radius: 6px;
+    outline: none;
+}
+
+#entrada:focus {
+    border-color: #333;
+}
+
+/* ==== BOTONES ==== */
+button {
+    padding: 8px 14px;
+    margin: 10px 4px 0 4px;
+    border: none;
+    cursor: pointer;
+    background: #ffffff;
+    border-radius: 6px;
+    transition: 0.2s;
+    border: 1px solid #999;
+}
+
+button:hover {
+    background: #e3e3e3;
+}
+
+/* ==== LISTA ==== */
+#lista {
+    list-style: none;
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+
+    background: #f3b7b7;
+    border-radius: 10px;
+
+    border: 3px solid #b56b6b;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+
+    max-height: 180px;
+    overflow-y: auto;
+}
+
+
+#lista li {
+    padding: 10px;
+    border-bottom: 1px solid #c68b8b;
+    font-size: 16px;
+}
+
+#lista li:last-child {
+    border-bottom: none;
+}
+
+#lista::-webkit-scrollbar {
+    width: 8px;
+}
+
+#lista::-webkit-scrollbar-thumb {
+    background: #c48787;
+    border-radius: 6px;
+}
