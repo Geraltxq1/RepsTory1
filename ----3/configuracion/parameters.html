@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>LabMetrics - Parámetros</title>
+<style>
+body{margin:0;font-family:Inter;background:#0b0f19;color:white;padding:25px;}
+.card{background:#111827;border:1px solid #1f2937;border-radius:12px;padding:20px;}
+table{width:100%;border-collapse:collapse;margin-top:10px;}
+th,td{padding:10px;border-bottom:1px solid #1f2937;}
+th{color:#94a3b8;text-align:left;}
+input,select{
+  background:#0f172a;border:1px solid #1f2937;color:white;
+  padding:8px;border-radius:8px;width:100%;
+}
+.row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-top:10px;}
+.btn{background:#4f46e5;color:white;border:none;padding:10px 12px;border-radius:8px;margin-top:10px;}
+</style>
+</head>
+<body>
+
+<div class="card">
+  <h2>Parámetros — Análisis de Agua</h2>
+
+  <table>
+    <tr>
+      <th>Parámetro</th>
+      <th>Tipo</th>
+      <th>Rango</th>
+    </tr>
+    <tr>
+      <td>pH</td>
+      <td>Número</td>
+      <td>6.5 - 8.5</td>
+    </tr>
+    <tr>
+      <td>Cloro residual</td>
+      <td>Número</td>
+      <td>0.2 - 1.0</td>
+    </tr>
+    <tr>
+      <td>Turbidez</td>
+      <td>Número</td>
+      <td>0 - 20</td>
+    </tr>
+  </table>
+
+  <h3 style="margin-top:20px;">Agregar nuevo parámetro</h3>
+
+  <div class="row">
+    <input placeholder="Nombre parámetro">
+    <select>
+      <option>Número</option>
+      <option>Texto</option>
+      <option>Booleano</option>
+    </select>
+    <input placeholder="Rango (ej: 0-10)">
+  </div>
+
+  <button class="btn">Guardar parámetro</button>
+</div>
+
+</body>
+</html>
