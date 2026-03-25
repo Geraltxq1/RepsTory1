@@ -1,5 +1,3 @@
-print("Ejercicio nmero8")
-
 def calcular_descuento(monto, tipo_cliente):
     if tipo_cliente == "premium":
         return monto * 0.8   

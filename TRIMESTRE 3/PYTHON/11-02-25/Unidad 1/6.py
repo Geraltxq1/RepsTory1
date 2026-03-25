@@ -1,4 +1,3 @@
-print("Ejercicio nmero6")
 ventas = []
 print("Registro de ventas (ingrese 0 para terminar)")
 producto = input("Ingrese el producto: ")

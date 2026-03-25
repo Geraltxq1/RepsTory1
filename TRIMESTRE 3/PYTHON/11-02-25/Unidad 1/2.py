@@ -1,5 +1,3 @@
-print("Ejercicio nro2")
-
 numero = int(input("Ingrese un numero: "))
 
 if numero < 0:

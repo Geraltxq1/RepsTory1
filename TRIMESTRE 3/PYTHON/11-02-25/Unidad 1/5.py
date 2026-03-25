@@ -1,4 +1,3 @@
-print("Ejercicio nmro5")
 num_ingresados = 0
 positivos = int(input("Ingrese su numero: "))
 while positivos >0 :

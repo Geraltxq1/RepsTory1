@@ -1,4 +1,3 @@
-print("Ejercicio nmero9")
 def registrar_ventas():
     ventas = []
     print("Registro de ventas (ingrese 0 para terminar)")
@@ -42,4 +41,4 @@ if len(ventas) > 0:
     print("Ventas mayores a 100:", contar_mayores_100(ventas))
     print("Ventas menores a 100:", contar_menores_100(ventas))
 else:
-    print("No hya ventas registradas")
+    print("No hya ventas registradas....")

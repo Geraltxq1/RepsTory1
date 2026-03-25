@@ -1,4 +1,3 @@
-print("Ejercicion nmro2")
 aprobados = 0
 reprobados = 0
 

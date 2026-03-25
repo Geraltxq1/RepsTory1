@@ -1,7 +1,5 @@
-print("Ejercicio nmr3")
-
 producto = input("Ingrese el producto a comprar: ")
-costo_ini = int(input("Ingrese el valor o costo del producto: "))
+costo_ini = int(input("Ingrese el valor del producto: "))
 
 
 
