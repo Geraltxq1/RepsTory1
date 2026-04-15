@@ -2,7 +2,7 @@ import random
 
 def elegir_palabra():
 
-    palabras = ["python", "computadora", "programacion", "teclado", "ahorcado", "juego", "terminal"]
+    palabras = ["julian", "andres", "juanes", "edu", "juanma", "sebastian", "silvana", "gaitan"]
     return random.choice(palabras)
 
 
@@ -13,7 +13,7 @@ def mtr_pgrso(palabra_secreta, letras_correctas):
         if letra in letras_correctas:
             progreso += letra + " "
         else:
-            progreso += "_ "
+            progreso += "_"
     return progreso.strip()
 
 
@@ -21,7 +21,7 @@ def ltra():
     while True:
         letra = input("Elige una letra: ").lower()
         if len(letra) != 1 or not letra.isalpha():
-            print("ingresa solo una letra válida.")
+            print("ingresa solo una letra validaa: ")
         else:
             return letra
         
@@ -34,13 +34,13 @@ def gndr(palabra_secreta, letras_correctas):
 
 
 def jgr_ardo():
-    print("Bienvenido al juego del Ahorcado")
+    print("Juego de Ahorcado")
+    print("_"*20)
     palabra = elegir_palabra()
     vidas = 6
     letras_correctas = []
     letras_incorrectas = []
-    print(f"\nLa palabra secreta tiene {len(palabra)} letras.")
-    print("_ " * len(palabra))
+    print(f"\nLa palabra secreta tiene {len(palabra)} letras")
     
     
     while vidas > 0:
@@ -56,7 +56,7 @@ def jgr_ardo():
             continue
 
         if letra in palabra:
-            print("Bien La letra esta en la palabra")
+            print("La letra esta en la palabra")
             letras_correctas.append(letra)
         else:
             print("Esa letra no esta en la palabra")
@@ -64,10 +64,10 @@ def jgr_ardo():
             vidas -= 1
 
         if gndr(palabra, letras_correctas):
-            print("\nFelicidades! adivinaste la palabra, Completaste el ahorcadp:", palabra)
+            print("\nFeliciades! adivinaste la palabra, Completaste el ahorcadp:", palabra)
             break
     else:
-        print("\nTe quedaste sin vidas. La palabra era:", palabra)
+        print("\nTe quedaste sin vidas, La palabra era:", palabra)
 
 
 if __name__ == "__main__":
