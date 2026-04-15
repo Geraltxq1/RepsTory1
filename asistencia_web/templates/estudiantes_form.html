@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block content %}
+  <h2>Nuevo estudiante</h2>
+
+  <form method="post" action="/estudiantes/nuevo" class="form">
+    <label>
+      Nombre (obligatorio)
+      <input type="text" name="nombre" required placeholder="Ej: Laura Pérez">
+    </label>
+
+    <label>
+      Documento (obligatorio, único)
+      <input type="text" name="documento" required placeholder="Ej: 1002345678">
+    </label>
+
+    <div class="row">
+      <button class="btn" type="submit">Guardar</button>
+      <a class="btn small" href="/estudiantes" style="background:#6c757d;">Cancelar</a>
+    </div>
+  </form>
+
+  <p style="margin-top:14px;color:#555;">
+    Nota: si el <b>name</b> del HTML no coincide con <code>Form(...)</code> en FastAPI, sale error <b>422</b>.
+  </p>
+{% endblock %}

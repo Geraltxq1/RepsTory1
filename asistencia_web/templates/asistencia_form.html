@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+{% block content %}
+  <h2>Registrar asistencia</h2>
+
+  {% if estudiantes|length == 0 %}
+    <p>Primero debes crear estudiantes.</p>
+    <a class="btn" href="/estudiantes/nuevo">Crear estudiante</a>
+  {% else %}
+    <form method="post" action="/asistencia/nueva" class="form">
+
+      <label>
+        Estudiante
+        <select name="id_estudiante" required style="width:100%;padding:9px 10px;border:1px solid #ddd;border-radius:10px;margin-top:6px;">
+          {% for e in estudiantes %}
+            <option value="{{ e[0] }}">{{ e[1] }} ({{ e[2] }})</option>
+          {% endfor %}
+        </select>
+      </label>
+
+      <label>
+        Fecha
+        <input type="date" name="fecha" required>
+      </label>
+
+      <label>
+        Estado
+        <select name="estado" required style="width:100%;padding:9px 10px;border:1px solid #ddd;border-radius:10px;margin-top:6px;">
+          <option value="PRESENTE">PRESENTE</option>
+          <option value="AUSENTE">AUSENTE</option>
+          <option value="TARDE">TARDE</option>
+        </select>
+      </label>
+
+      <div class="row">
+        <button class="btn" type="submit">Registrar</button>
+        <a class="btn small" href="/asistencia" style="background:#6c757d;">Cancelar</a>
+      </div>
+    </form>
+  {% endif %}
+{% endblock %}

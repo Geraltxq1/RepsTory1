@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block content %}
+  <h2>Reportes</h2>
+
+  <div class="cards">
+    <div class="card">
+      <div class="card-title">Total registros</div>
+      <div class="card-value">{{ resumen.total }}</div>
+    </div>
+    <div class="card">
+      <div class="card-title">Presentes</div>
+      <div class="card-value">{{ resumen.presentes }}</div>
+    </div>
+    <div class="card">
+      <div class="card-title">Ausentes</div>
+      <div class="card-value">{{ resumen.ausentes }}</div>
+    </div>
+    <div class="card">
+      <div class="card-title">Tarde</div>
+      <div class="card-value">{{ resumen.tarde }}</div>
+    </div>
+  </div>
+
+  <p style="color:#555;">
+    Este reporte se construye con consultas SQL (COUNT) desde <code>database.py</code>.
+  </p>
+{% endblock %}

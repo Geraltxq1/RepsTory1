@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+{% block content %}
+  <h2>Registros de asistencia</h2>
+
+  {% if asistencia|length == 0 %}
+    <p>No hay asistencias registradas.</p>
+  {% else %}
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Fecha</th>
+          <th>Estado</th>
+          <th>Estudiante</th>
+          <th>Documento</th>
+          <th>Fecha registro</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for a in asistencia %}
+        <tr>
+          <td>{{ a[0] }}</td>
+          <td>{{ a[1] }}</td>
+          <td>
+            {% if a[2] == "PRESENTE" %}
+              <span class="badge ok">PRESENTE</span>
+            {% elif a[2] == "AUSENTE" %}
+              <span class="badge danger">AUSENTE</span>
+            {% else %}
+              <span class="badge warn">TARDE</span>
+            {% endif %}
+          </td>
+          <td>{{ a[4] }}</td>
+          <td>{{ a[5] }}</td>
+          <td>{{ a[6] }}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  {% endif %}
+
+  <p style="margin-top: 16px;">
+    <a class="btn" href="/asistencia/nueva">Registrar asistencia</a>
+  </p>
+{% endblock %}

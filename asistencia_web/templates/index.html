@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block content %}
+  <h2>Inicio</h2>
+  <p>Este sistema registra estudiantes y asistencia (PRESENTE/AUSENTE/TARDE) usando:</p>
+  <ul>
+    <li>FastAPI como servidor web</li>
+    <li>Templates (Jinja2) para pantallas</li>
+    <li>Formularios (POST) para enviar datos</li>
+    <li>MySQL para persistencia (database.py)</li>
+    <li>Patrón PRG: POST → Redirect(303) → GET</li>
+  </ul>
+
+  <p>
+    Empieza por: <a class="btn" href="/estudiantes">Ver estudiantes</a>
+  </p>
+{% endblock %}
