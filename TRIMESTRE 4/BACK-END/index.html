@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Juego de Preguntas</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #1e1e2f;
+        color: white;
+        text-align: center;
+    }
+
+    .container {
+        width: 80%;
+        margin: auto;
+    }
+
+    input {
+        width: 60%;
+        padding: 8px;
+        margin: 10px;
+    }
+
+    button {
+        padding: 10px 20px;
+        margin: 10px;
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    #timer {
+        font-size: 24px;
+        color: yellow;
+    }
+
+    .finalizar {
+        background: green;
+        color: white;
+    }
+
+    .reiniciar {
+        background: red;
+        color: white;
+    }
+</style>
+
+
+</head>
+
+<body onload="iniciarJuego()">
+
+
+<div class="container">
+    <h1>Juego de Preguntas</h1>
+
+    <h2>Tiempo restante: <span id="timer">30</span> segundos</h2>
+
+    <!-- Preguntas -->
+    <div>
+        <p>1. ¿Cuál es tu color favorito?</p>
+        <input type="text" id="p1">
+
+        <p>2. ¿Cuál es tu comida favorita?</p>
+        <input type="text" id="p2">
+
+        <p>3. ¿En qué ciudad vives?</p>
+        <input type="text" id="p3">
+
+        <p>4. ¿Cuál es tu videojuego favorito?</p>
+        <input type="text" id="p4">
+
+        <p>5. ¿Cuál es tu deporte favorito?</p>
+        <input type="text" id="p5">
+
+        <p>6. ¿Cuál es tu serie favorita?</p>
+        <input type="text" id="p6">
+    </div>
+
+    <!-- Botones -->
+    <button class="finalizar" onclick="finalizarJuego()">Finalizar</button>
+    <button class="reiniciar" onclick="reiniciarJuego()">Volver a intentar</button>
+
+    <!-- Audio -->
+    <audio id="gameoverSound">
+        <source src="https://www.soundjay.com/button/beep-10.mp3" type="audio/mpeg">
+    </audio>
+</div>
+
+<script>
+    let tiempo = 30;
+    let contador;
+
+    function iniciarJuego() {
+        contador = setInterval(actualizarTiempo, 1000);
+    }
+
+    function actualizarTiempo() {
+        tiempo--;
+        document.getElementById("timer").textContent = tiempo;
+
+        if (tiempo <= 0) {
+            clearInterval(contador);
+            document.getElementById("gameoverSound").play();
+            alert(" Game Over ");
+            
+        }
+    }
+
+    function finalizarJuego() {
+        clearInterval(contador);
+
+        let respuestas = [
+            document.getElementById("p1").value,
+            document.getElementById("p2").value,
+            document.getElementById("p3").value,
+            document.getElementById("p4").value,
+            document.getElementById("p5").value,
+            document.getElementById("p6").value
+        ];
+
+        let fecha = new Date().toLocaleString();
+
+        let mensaje = "Respuestas:\n\n";
+
+        for (let i = 0; i < respuestas.length; i++) {
+            mensaje += (i + 1) + ". " + respuestas[i] + "\n";
+        }
+
+        mensaje += "\nFecha: " + fecha;
+
+        alert(mensaje);
+    }
+
+    function reiniciarJuego() {
+        location.reload();
+    }
+</script>
+
+</body>
+</html>

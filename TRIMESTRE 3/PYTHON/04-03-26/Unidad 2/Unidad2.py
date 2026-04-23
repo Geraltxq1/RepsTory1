@@ -22,11 +22,11 @@ def validar_prioridad(prioridad):
 
 def registrar_ticket():
     try:
-        usuario = input("Nombre del usuario: ").strip()            #.strip() Esto hace que no haya espeacios 
-        area = input(f"Area {AREAS_VALIDAS}: ").strip().lower()         #.strip() Esto hace que no haya espeacios 
-                                                                        #Lower() pasa de mayusculas a minusculas asi no hya errores
-        descripcion = input("Descripcion del problema: ").strip()       #.strip() Esto hace que no haya espeacios 
-        prioridad = input(f"Prioridad {PRIORIDADES_VALIDAS}: ").strip()    #.strip() Esto hace que no haya espeacios 
+        usuario = input("Nombre del usuario: ").strip()            
+        area = input(f"Area {AREAS_VALIDAS}: ").strip().lower()         
+                                                                        
+        descripcion = input("Descripcion del problema: ").strip()       
+        prioridad = input(f"Prioridad {PRIORIDADES_VALIDAS}: ").strip()    
 
         if not descripcion:
             print("La descripcion no puede estar vacia")
@@ -51,7 +51,7 @@ def registrar_ticket():
             "fecha": fecha
         }
 
-        tickets.append(ticket)  #append añade ticket ala lista
+        tickets.append(ticket) 
 
         print("Ticket registrado correctamente")
 
@@ -116,8 +116,8 @@ def generar_reporte():
     print("Tickets por área:", por_area)
     print("Tickets prioridad alta:", altas)
 
-    mas_reciente = max(tickets, key=lambda x: x["fecha"]) # Esto hace que se busque la fecha del ticket mas reciente o mas grande
-    print("Ticket más reciente:", mas_reciente)           #lambda hace que se compare la fecha con el max 
+    mas_reciente = max(tickets, key=lambda x: x["fecha"]) 
+    print("Ticket más reciente:", mas_reciente)          
 
 
 def listar_tickets():
@@ -126,12 +126,11 @@ def listar_tickets():
         return
 
     print("\n===== LISTADO DE TICKETS =====")
-    for i, ticket in enumerate(tickets):            #enumerate Permite recorrer una lista y obtener su posicion de el 
+    for i, ticket in enumerate(tickets):            
         print(f"\nTicket #{i}")
         for clave, valor in ticket.items():
             print(f"{clave.capitalize()}: {valor}")
 
-# Menu de opcines para operar
 
 def main():
     while True:
