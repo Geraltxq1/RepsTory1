@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block content %}
+  <h2>Estudiantes</h2>
+
+  {% if estudiantes|length == 0 %}
+    <p>No hay estudiantes registrados.</p>
+  {% else %}
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Documento</th>
+          <th>Fecha registro</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for e in estudiantes %}
+        <tr>
+          <td>{{ e[0] }}</td>
+          <td>{{ e[1] }}</td>
+          <td>{{ e[2] }}</td>
+          <td>{{ e[3] }}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  {% endif %}
+
+  <p style="margin-top: 16px;">
+    <a class="btn" href="/estudiantes/nuevo">Crear estudiante</a>
+  </p>
+{% endblock %}

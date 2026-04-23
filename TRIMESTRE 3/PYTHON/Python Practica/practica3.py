@@ -19,3 +19,4 @@ else:
 print("Reprobados:", reprobados)
 print("Aprobados:", aprobados)
 print("Estudiante Registrado", estudiantes)
+

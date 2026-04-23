@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Asistencia Web</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Asistencia Web</h1>
+    <nav>
+      <a href="/">Inicio</a>
+      <a href="/estudiantes">Estudiantes</a>
+      <a href="/estudiantes/nuevo">Nuevo estudiante</a>
+      <a href="/asistencia">Asistencia</a>
+      <a href="/asistencia/nueva">Registrar asistencia</a>
+      <a href="/reportes">Reportes</a>
+    </nav>
+  </header>
+
+  <main>
+    {% if msg %}
+      <div class="alert ok">{{ msg }}</div>
+    {% endif %}
+    {% if error %}
+      <div class="alert error">{{ error }}</div>
+    {% endif %}
+
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer>
+    <small>Unidad 4 — FastAPI + Templates + MySQL (sin API)</small>
+  </footer>
+</body>
+</html>
