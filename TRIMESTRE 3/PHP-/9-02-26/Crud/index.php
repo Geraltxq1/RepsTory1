@@ -18,9 +18,10 @@ require_once __DIR__ . '/helpers.php';
 
 $pdo = getPDO();
 
-// Preparamos la consulta SQL para obtener todas las ventas
+// Preparamos la consulta SQL para obtener todas las ventas.
+// Incluimos la fecha de la venta y la fecha de creación del registro.
 
-$stmt = $pdo->query("SELECT id, producto, monto,fecha,creado_en 
+$stmt = $pdo->query("SELECT id, producto, monto, fecha, creado_en 
 FROM ventas ORDER BY creado_en DESC");
 
 $ventas = $stmt->fetchAll();
@@ -28,7 +29,7 @@ $ventas = $stmt->fetchAll();
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
 
@@ -161,22 +162,31 @@ $ventas = $stmt->fetchAll();
 
             <?php foreach ($ventas as $v): ?>
 
+                <?php
+                // Escapamos salida para prevenir XSS al imprimir datos en HTML.
+                $producto = htmlspecialchars((string)$v['producto'], ENT_QUOTES, 'UTF-8');
+                $fechaVenta = htmlspecialchars((string)$v['fecha'], ENT_QUOTES, 'UTF-8');
+                $creadoEn = htmlspecialchars((string)$v['creado_en'], ENT_QUOTES, 'UTF-8');
+                ?>
+
                 <tr>
 
                     <td><?php echo $v['id']; ?></td>
-                    <td><?php echo ($v['producto']); ?></td>
+                    <td><?php echo $producto; ?></td>
                     <td>$<?php echo number_format((float)$v['monto'], 2, ',', ','); ?>
 
                 </td>
 
-                    <td class="muted"><?php echo ($v['creado_en']); ?></td>
+                    <td><?php echo $fechaVenta; ?></td>
+
+                    <td class="muted"><?php echo $creadoEn; ?></td>
 
                     <td>
 
                         <a class="btn" href="edit.php?id=<?php echo (int)$v['id']; ?>">
                             Editar</a>
                         
-            <!-- Eliminar por methodo POST para evitar que se eliminen borrados por url -->$_COOKIE
+            <!-- Eliminar por método POST para evitar eliminaciones por URL -->
 
                     <form class="inline" method="POST" action="delete.php" 
                     onsubmit="return 
@@ -201,7 +211,7 @@ $ventas = $stmt->fetchAll();
 
             <?php endif; ?>
 
-            <p  class ="muted" style=margin-top:18px>
+            <p  class ="muted" style="margin-top:18px;">
             Si es la primera vez que ejecutas este proyecto, 
             asegúrate de ejecutar el script setup.php para crear la tabla.
             </p>
